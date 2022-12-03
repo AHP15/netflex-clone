@@ -1,0 +1,26 @@
+.popup {
+  border: 2px solid red;
+  position: fixed;
+  z-index: 110;
+  height: calc(100vh - 20px);
+  width: calc(100% - 20px);
+  inset: 10px;
+  background-color: #111;
+  border-radius: 5px;
+  overflow: hidden;
+  transform: scale(0);
+  transition: 0.3s;
+}
+
+.show {
+  transform: scale(1);
+}
+
+.close-icon {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  object-fit: contain;
+  cursor: pointer;
+}
