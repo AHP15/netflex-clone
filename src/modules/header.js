@@ -22,6 +22,7 @@ const header = () => {
         <img src="${logo}" alt="Netflix logo" />
       </div>
       <form>
+        <label for="search" hidden>search</label>
         <input class="search-input" type="text" name="search" placehodler="Find you favorite movie" />
       </form>
     </nav>

@@ -8,6 +8,7 @@ const banner = (movie) => {
   const getImages = async () => {
     const url = `${process.env.MOVIE_DETAIL_URL}/${movie.id}/images?api_key=${process.env.API_KEY}`;
     const images = await getData(url);
+    console.log(images)
 
     if(images.success) {
       return images.data.backdrops.map(pos => `${process.env.IMAGE_URL}${pos.file_path}`);
@@ -18,7 +19,6 @@ const banner = (movie) => {
 
   window.addEventListener('load', async () => {
     const banner = document.querySelector('.banner');
-
     const images = await getImages();
     images.forEach(img => {
       banner.insertAdjacentHTML(
@@ -32,7 +32,7 @@ const banner = (movie) => {
     if (images.length === 0) {
       images.push(`${process.env.IMAGE_URL}${movie.backdrop_path}`);
     }
-    
+
     let rightSide = true;
     const toggleSide = () => rightSide = !rightSide;
     const imageWidth = window.innerWidth;

@@ -14,3 +14,16 @@ main {
   background-color: #111;
   min-height: 100vh;
 }
+
+.error {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  width: 250px;
+  padding: 5px 10px;
+  color: red;
+  border: 1px solid red;
+  background-color: rgba(255, 0, 0, 0.2);
+  border-radius: 5px;
+  font-size: 18px;
+}
